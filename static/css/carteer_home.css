@@ -74,12 +74,13 @@ a {
 .jobtext .heading {
   font-size: 60px;
   font-weight: 400;
+  font-family: Arial, sans-serif;
 }
 
 .jobtext .txt {
   font-size: 25px;
   font-weight: 100;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .jobimage {
@@ -118,12 +119,14 @@ a {
 .savemoney .heading {
   font-size: 60px;
   font-weight: 400;
+  font-family: Arial, sans-serif;
 }
 
 .savemoney .txt {
-  font-size: 25px;
-  font-weight: 100;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem; /* Set the font size for the subheading */
+  color: black; /* Set the text color for subheading */
+  margin-top: 0.5rem;
 }
 
 .moneyimage {

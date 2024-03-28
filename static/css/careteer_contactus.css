@@ -1,3 +1,4 @@
+/* navabar */
 * {
   margin: 0;
   padding: 0%;
@@ -9,6 +10,7 @@
   background-color: white;
   height: 40px;
   gap: 150px;
+  box-shadow: 0px 0px 5px 0px black;
 }
 
 .title {
@@ -52,8 +54,8 @@ a {
   font-size: 20 px;
   color: black;
 }
+/* navabar */
 
-/* footer */
 /* footer */
 footer {
   background-color: black;
@@ -148,44 +150,116 @@ footer {
 }
 /* footer */
 
-/* form */
-.classform {
-  background-color: grey;
-  height: 900px;
+/* Contact section */
+
+.contactsection {
   display: flex;
-  justify-content: center;
+  width: 70rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 50px 0px 50px 300px;
+}
+
+.contactsection .title {
+  align-self: stretch;
+
+  color: var(--Black-900, #121212);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  /* Headline 4 */
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.75rem; /* 110% */
+  letter-spacing: -0.025rem;
   align-items: center;
 }
 
-.form {
-  background-color: white;
-  padding: 60px;
-  width: 600px;
-  height: 700px;
-  border-radius: 20px;
+.contactsection .info {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  width: 70.0625rem;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  background: #fff;
 }
 
-form {
+.contactsection .card {
   display: flex;
+  padding: 1rem 2rem;
   flex-direction: column;
-  gap: 25px;
-}
-.input {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0 0;
+  height: 9.75rem;
+
+  background: var(--neutral-02100, #f3f5f7);
 }
 
-.input1 {
-  display: flex;
-  gap: 50px;
+.contactsection .svg {
+  width: 2rem;
+  height: 2rem;
 }
 
-label {
-  font-size: large;
+.contactsection .cardtxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactsection .cardlight {
+  color: var(--neutral-04100, #6c7275);
+
+  /* Hairline 1 */
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem; /* 100% */
+  text-transform: uppercase;
+}
+
+.contactsection .cardnormal {
+  width: 18.3125rem;
+
+  color: var(--neutral-07100, #141718);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  /* Body 2 (Semi) */
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.625rem; /* 162.5% */
+}
+
+.contactsection .getintouch {
+  display: flex;
+  width: 70rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contactsection .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.contactsection .forminput {
+  display: flex;
+  width: 34rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contactsection label {
   color: var(--neutral-04100, #6c7275);
   /* Hairline 2 */
   font-family: Inter;
@@ -196,39 +270,58 @@ label {
   text-transform: uppercase;
 }
 
-input {
-  width: Fill (707px) px;
-  height: 30px;
-  padding: 0px 10px 0px 10px;
+.contactsection input {
+  display: flex;
+  height: 2.5rem;
+  padding: 0rem 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+
   border-radius: 0.375rem;
   border: 1px solid var(--Black-300, #cbcbcb);
   background: var(--White, #fff);
 }
 
-#skills {
-  height: 100px;
-  padding: 8px 10px 0px 10px;
-}
-#Degree {
-  width: 250px;
-}
-
-#Domain {
-  width: 250px;
-}
-
-.proceed button {
-  width: 150px;
-  height: 50px;
-  padding: 20px, 20px, 20px, 20px;
-  background-color: rgb(209, 41, 41);
-  border-radius: 10px;
-  border: none;
+#message {
+  display: flex;
+  height: 8.75rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+  border-radius: 0.375rem;
+  border: 1px solid var(--Black-300, #cbcbcb);
+  background: var(--White, #fff);
+  padding: 15px;
 }
 
-.heading {
+.contactsection button {
+  display: flex;
+  padding: 0.375rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-radius: 0.5rem;
+  background: var(--neutral-07100, #141718);
+}
+
+.contactsection .buttontxt {
+  color: #fff;
+
   text-align: center;
-  font-size: 40px;
-  font-weight: normal;
+  font-feature-settings: "clig" off, "liga" off;
+  /* Button S */
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem; /* 175% */
+  letter-spacing: -0.025rem;
 }
-/* form */
+
+.contactsection .map {
+  width: 34.25rem;
+  height: 25.25rem;
+  flex-shrink: 0;
+}
