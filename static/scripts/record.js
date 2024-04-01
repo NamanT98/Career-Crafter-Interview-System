@@ -19,11 +19,11 @@ const videoMediaConstraints = {
 
 function startRecording(thisButton, otherButton) {
   // Access the microphone
+  chunks = [];
 
   navigator.mediaDevices
     .getUserMedia(audioMediaConstraints)
     .then((mediaStream) => {
-      console.log(mediaStream);
       const mediaRecorder = new MediaRecorder(mediaStream);
       window.mediaStream = mediaStream;
       window.mediaRecorder = mediaRecorder;
@@ -34,10 +34,10 @@ function startRecording(thisButton, otherButton) {
       };
 
       mediaRecorder.onstop = () => {
-        const blob = new Blob(chunks, {
+        var blob = new Blob(chunks, {
           type: "audio/wav",
         });
-        chunks = [];
+        // chunks = [];
 
         recordedMedia = document.createElement("audio");
         recordedMedia.controls = true;
@@ -46,7 +46,7 @@ function startRecording(thisButton, otherButton) {
 
         recordedMedia.src = recordedMediaURL;
 
-        document.getElementById(`vid-recorder`).append(recordedMedia);
+        // document.getElementById(`vid-recorder`).append(recordedMedia);
       };
 
       document.getElementById(`vid-record-status`).innerText = "Recording";
@@ -69,6 +69,25 @@ function stopRecording(thisButton, otherButton, submitbutton) {
   submitbutton.disabled = false;
 }
 
-function submit(thisbutton) {
-  alert("Submitted");
+function submit(thisButton) {
+  var blob = new Blob(chunks, {
+    type: "audio/wav",
+  });
+
+  const formData = new FormData();
+  formData.append("audio_data", blob, "file");
+  formData.append("type", "wav");
+
+  fetch("/submit", {
+    method: "POST",
+    cache: "no-cache",
+    body: formData,
+  }).then((response) => {
+    if (response.ok) {
+      console.log(response);
+      // window.location.href = response.url;
+    } else {
+      console.error("Error saving audio:", response.statusText);
+    }
+  });
 }

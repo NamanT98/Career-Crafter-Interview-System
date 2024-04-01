@@ -4,7 +4,10 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 import json
+import myprosody as mps
+import subprocess
 
 def index(request):
     return render(request,'index.html')
@@ -84,5 +87,35 @@ def account(request):
 def interview(request):
     if request.user.is_authenticated:
         return render(request,'interview.html')
+    else:
+        return redirect('/login')
+    
+@csrf_exempt
+def submit(request):
+    if request.user.is_authenticated:
+        if request.method=="POST":
+            audio_file = request.FILES.get('audio_data')
+            # decoded_data = base64.b64decode(audio_file.read())
+            webm_path='dataset/audioFiles/record1.webm'
+            decoded_data=audio_file.read()
+            with open(webm_path, 'wb') as f:
+                f.write(decoded_data)
+
+            wav_path='dataset/audioFiles/record1.wav'
+            path='D:\Acads\SEM 6\CSD\Interview-System\interview'
+
+            command=['ffmpeg','-y','-i',webm_path,'-c:a','pcm_f32le',wav_path]
+            subprocess.run(command)
+            
+            result={"Gender":mps.myspgend('record1',path),
+                    "Number of Pauses":mps.mysppaus('record1',path),
+                    "Rate of Speech":mps.myspsr('record1',path),
+                    "Articulation Rate":mps.myspatc('record1',path),
+                    "Speaking Duration":mps.myspst('record1',path),
+                    "Original Duration":mps.myspod('record1',path),
+                    "Pronunciation Score":mps.mysppron('record1',path),
+                    }
+
+            return HttpResponse(json.dumps(result),content_type='application/json')
     else:
         return redirect('/login')

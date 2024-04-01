@@ -8,5 +8,6 @@ urlpatterns = [
     path('logout',views.logout,name='logout'),
     path('contactus',views.contact,name='contact'),
     path('account',views.account,name='account'),
-    path('interview',views.interview,name='interview')
+    path('interview',views.interview,name='interview'),
+    path('submit',views.submit,name='submit')
     ]
