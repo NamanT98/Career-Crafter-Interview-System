@@ -51,6 +51,7 @@ a {
   text-decoration: none;
   font-size: 20 px;
   color: black;
+  width: max-content;
 }
 
 /* job ready */

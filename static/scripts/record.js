@@ -22,7 +22,7 @@ function startRecording(thisButton, otherButton) {
   chunks = [];
 
   navigator.mediaDevices
-    .getUserMedia(audioMediaConstraints)
+    .getUserMedia(videoMediaConstraints)
     .then((mediaStream) => {
       const mediaRecorder = new MediaRecorder(mediaStream);
       window.mediaStream = mediaStream;
@@ -35,11 +35,11 @@ function startRecording(thisButton, otherButton) {
 
       mediaRecorder.onstop = () => {
         var blob = new Blob(chunks, {
-          type: "audio/wav",
+          type: "video/webm",
         });
         // chunks = [];
 
-        recordedMedia = document.createElement("audio");
+        recordedMedia = document.createElement("video");
         recordedMedia.controls = true;
 
         const recordedMediaURL = URL.createObjectURL(blob);
@@ -71,12 +71,12 @@ function stopRecording(thisButton, otherButton, submitbutton) {
 
 function submit(thisButton) {
   var blob = new Blob(chunks, {
-    type: "audio/wav",
+    type: "video/webm",
   });
 
   const formData = new FormData();
-  formData.append("audio_data", blob, "file");
-  formData.append("type", "wav");
+  formData.append("video_data", blob, "file");
+  formData.append("type", "webm");
 
   fetch("/submit", {
     method: "POST",
