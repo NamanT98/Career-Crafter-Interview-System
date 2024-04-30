@@ -13,52 +13,55 @@
   <body>
     <!-- left component -->
     <div style="display: flex">
-      <div class="left">
-        <div class="animation">
-          <span style="font-size: 100px">Carteer</span>
-          <dotlottie-player
-            src="https://lottie.host/f4927811-daeb-472a-9a05-9522b53c6c64/rT3U9w8NOw.json"
-            background="transparent"
-            speed="1"
-            style="width: 400px; height: 400px"
-            loop
-            autoplay
-          ></dotlottie-player>
-        </div>
+      <div class="animation">
+        <span style="font-size: 6vw">Carteer</span>
+        <dotlottie-player
+          src="https://lottie.host/f4927811-daeb-472a-9a05-9522b53c6c64/rT3U9w8NOw.json"
+          background="transparent"
+          speed="1"
+          style="width: 30vw; height: 40vh"
+          loop
+          autoplay
+        ></dotlottie-player>
       </div>
+
       <!-- Form component -->
-      <div class="right">
-        <div class="title">
-          <div class="signupheader">
-            <span class="up">Sign In</span>
+      <div style="display: flex">
+        <div class="right">
+          <div class="title">
+            <div class="signupheader">
+              <span class="up">Sign In</span>
+            </div>
+            <div class="signupcontent">
+              <span id="signin"
+                >Don't have an account yet?
+                <a href="carteer_register.html" class="green">Sign Up</a></span
+              >
+            </div>
           </div>
-          <div class="signupcontent">
-            <span id="signin"
-              >Don't have an account yet?
-              <a href="carteer_register.html" class="green">Sign Up</a></span
-            >
+          <div class="signupform">
+            <form action="login" method="POST">
+              <input
+                type="text"
+                name="Username"
+                id="username"
+                placeholder="UserName"
+                required
+              />
+              <input
+                type="password"
+                name="Password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <a href="carteer_home.html">
+                <button type="submit">
+                  <span class="signupbutton">Sign In</span>
+                </button>
+              </a>
+            </form>
           </div>
-        </div>
-        <div class="signupform">
-          <form action="login" method="POST">
-            <input
-              type="text"
-              name="Username"
-              id="username"
-              placeholder="UserName"
-              required
-            />
-            <input
-              type="password"
-              name="Password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-            <button type="submit">
-              <span class="signupbutton">Sign In</span>
-            </button>
-          </form>
         </div>
       </div>
     </div>

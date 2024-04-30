@@ -1,14 +1,14 @@
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
 }
 
 .navbar {
   display: flex;
   padding: 1.5vw 7vw 1.5vw 10.7vw;
   background-color: white;
-  height: 3vh;
-  gap: 7vw;
+  height: 1.6vh;
+  gap: 6.5vw;
 }
 
 .title {
@@ -17,88 +17,84 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 2.5vw;
+  font-size: 1.5vw;
   font-weight: 500;
 }
 
 .links {
   display: flex;
-  gap: 30vw;
-  align-items: center;
+  gap: 68vw;
 }
 .started {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2vw;
-  width: 8vw;
+  height: 1.8vh;
+  width: 7.3vw;
 }
 .started button {
-  height: 2vw;
-  width: 8vw;
-  padding: 0.1vw;
-  border-radius: 20px;
+  height: 1.8vh;
+  width: 7.3vw;
+  padding: 0.5vw;
+  border-radius: 2vw;
   background-color: #3dc468;
   border: none;
-  font-size: 0.8vw;
 }
 .navlink {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6vw;
+  gap: 10vw;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.1vw;
+  font-size: 1.5vw;
   color: black;
-  width: max-content;
 }
 
 /* job ready */
 .jobready {
   display: flex;
-  padding: 6vw;
-  padding-left: 12vw;
-  gap: 12vw;
+  padding: 4.3vw;
+  padding-left: 8.6vw;
+  gap: 8.6vw;
   background-color: orange;
 }
 
 .jobtext {
   display: flex;
-  padding: 1.2vw;
+  padding: 1.7vw;
   flex-direction: column;
-  width: 36vw;
-  gap: 3vw;
+  width: 25vw;
+  gap: 3.8vw;
   justify-content: center;
 }
 
 .jobtext .heading {
-  font-size: 4vw;
+  font-size: 2.6vw;
   font-weight: 400;
   font-family: Arial, sans-serif;
-  width: max-content;
 }
 
 .jobtext .txt {
-  font-size: 1.3vw;
+  font-size: 1vw;
   font-weight: 100;
   font-family: Arial, sans-serif;
-  line-height: 2.5vw;
 }
 
 .jobimage {
-  width: 24vw;
-  border-radius: 3px;
+  width: 17vw;
+  height: 21.3vh;
+  border-radius: 0.13vw;
 }
 
 .jobimage img {
   display: block;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  width: 17vw;
+  height: 21.3vh;
+  border-radius: 1.3vw;
 }
 
 /* job ready */
@@ -106,90 +102,82 @@ a {
 /* savemoney */
 .savemoney {
   display: flex;
-  padding: 6vw;
-  padding-left: 12vw;
-  gap: 12vw;
+  padding: 4.3vw;
+  padding-left: 8.6vw;
+  gap: 8.6vw;
   background-color: #77b896;
 }
 
 .savemoneytext {
   display: flex;
-  padding: 1.2vw;
+  padding: 1.7vw;
   flex-direction: column;
-  width: 36vw;
-  gap: 3vw;
-  justify-content: center;
+  width: 25vw;
+  gap: 3.8vw;
 }
 
 .savemoney .heading {
-  font-size: 4vw;
+  font-size: 2.6vw;
   font-weight: 400;
   font-family: Arial, sans-serif;
-  width: max-content;
 }
 
 .savemoney .txt {
-  font-size: 1.3vw;
-  font-weight: 100;
   font-family: Arial, sans-serif;
-  line-height: 2.5vw;
+  font-size: 1vw;
+  color: black;
+  margin-top: 0.5vh;
 }
 
 .moneyimage {
-  width: 24vw;
-  border-radius: 3px;
+  width: 17vw;
+  height: 21.3vh;
+  border-radius: 0.13vw;
 }
 
 .moneyimage img {
   display: block;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  width: 17vw;
+  height: 21.3vh;
+  border-radius: 1.3vw;
 }
 
 /* save money */
 /* container-1 */
 
 .container {
-  padding: 6vw;
+  padding: 4.3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3vw;
+  gap: 3.8vw;
   background-color: #90a0a4;
 }
-
 .content {
   display: flex;
-  gap: 4.5vw;
+  gap: 6.5vw;
 }
 
-h3 {
-  font-size: 1.2vw;
-}
 .content-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #a090a4;
-  width: 20vw;
-  height: 30vh;
-  padding: 1vw;
-  gap: 1vw;
+  width: 7.3vw;
+  height: 6.3vh;
+  padding: 1.9vw;
 }
-
-.para {
-  padding-left: 2vw;
-  font-size: 1vw;
+.content-box h3 {
+  margin-bottom: 0.65vh;
 }
 
 .container button {
-  width: 18vw;
-  height: 6vh;
-  padding: 1vw;
-  border-radius: 15px;
+  width: 6.5vw;
+  height: 3.8vh;
+  padding: 0.65vw;
+  border-radius: 1.9vw;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -212,16 +200,16 @@ footer {
   text-align: center;
 }
 .footer-content h3 {
-  font-size: 2.1rem;
+  font-size: 2.1vw;
   font-weight: 500;
   text-transform: capitalize;
-  line-height: 3rem;
+  line-height: 3.8vh;
 }
 .footer-content p {
-  max-width: 500px;
-  margin: 10px auto;
-  line-height: 28px;
-  font-size: 14px;
+  max-width: 32.5vw;
+  margin: 0.65vw auto;
+  line-height: 1.55vw;
+  font-size: 0.98vw;
   color: #cacdd2;
 }
 .socials {
@@ -229,22 +217,22 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 3rem 0;
+  margin: 0.65vw 0 1.95vw 0;
 }
 .socials li {
-  margin: 0 10px;
+  margin: 0 1vw;
 }
 .socials a {
   text-decoration: none;
   color: #fff;
-  border: 1.1px solid white;
-  padding: 5px;
+  border: 0.11vw solid white;
+  padding: 0.5vw;
 
-  border-radius: 50%;
+  border-radius: 3vw;
 }
 .socials a i {
-  font-size: 1.1rem;
-  width: 20px;
+  font-size: 0.55vw;
+  width: 1.3vw;
 
   transition: color 0.4s ease;
 }
@@ -254,20 +242,20 @@ footer {
 
 .footer-bottom {
   background: #000;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 0.65vw;
+  padding-bottom: 1.3vh;
   text-align: center;
 }
 .footer-bottom p {
   float: left;
-  font-size: 14px;
-  word-spacing: 2px;
+  font-size: 0.98vw;
+  word-spacing: 0.2vw;
   text-transform: capitalize;
   color: white;
 }
 .footer-bottom p a {
   color: #44bae8;
-  font-size: 16px;
+  font-size: 1.3vw;
   text-decoration: none;
 }
 .footer-bottom span {
@@ -282,7 +270,7 @@ footer {
   display: flex;
 }
 .footer-menu ul li {
-  padding-right: 10px;
+  padding-right: 0.65vw;
   display: block;
 }
 .footer-menu ul li a {
